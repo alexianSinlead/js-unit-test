@@ -9,12 +9,16 @@ export class Holiday {
   }
 
   sayHello() {
-    const today = new Date();
+    const today = this.getToday();
 
     if (`${today.getMonth() + 1}/${today.getDate()}` === this.christmasDay) {
       return 'Merry Xmas';
     }
 
     return 'Today is not Xmas';
+  }
+
+  getToday() {
+    return new Date();
   }
 }
